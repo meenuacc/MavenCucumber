@@ -10,12 +10,13 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-public class Steps {
+public class StepDefinitions {
 	
-	WebDriver driver = new FirefoxDriver();
+	WebDriver driver;
 	
 	@Given("^I navigate to the url$")
 	public void i_navigate_to_the_url() throws Throwable {
+		driver = new FirefoxDriver();
 	    driver.navigate().to("http://www.bbc.co.uk/");
 	}
 
@@ -34,6 +35,4 @@ public class Steps {
 	public void i_close_the_browser() throws Throwable {
 	    driver.quit();
 	}
-
-
 }

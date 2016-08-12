@@ -8,7 +8,9 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith (Cucumber.class)
 @CucumberOptions(
-		format = {"pretty" , "html:target/html"}, 
+		format = {"pretty"},
+		glue = {"Steps"},
+		plugin = {"html:target/cucmber-html-report"},
 		features = "src/test/resource"
 		
 		)
